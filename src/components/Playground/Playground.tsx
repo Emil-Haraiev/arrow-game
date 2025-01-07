@@ -2,8 +2,9 @@ import React, {useEffect, useState} from "react";
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
 import {setCurrentStep} from "./store/slices";
 import Controls from "./components/Controls";
+import {INTERVAL_TIME} from "./constants";
 
-export const INTERVAL_TIME = 3000;
+
 
 const Playground : React.FC= () => {
     const state = useAppSelector((state) => state.playground);
