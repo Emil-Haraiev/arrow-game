@@ -1,12 +1,14 @@
+import Playground from "./components/Playground";
+import React from "react";
 
 
-
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="App">
-      App
+      <Playground/>
     </div>
   )
 }
 
 export default App
+
