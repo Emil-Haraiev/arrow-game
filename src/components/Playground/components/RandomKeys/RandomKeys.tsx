@@ -1,25 +1,30 @@
-import React from 'react';
-import {useAppSelector} from "../../../../app/hooks";
-import {setSteps} from "../../store/slices";
-import {MAP_ARROW_CODES} from "../../constants";
-import {IMapArrowCodes} from "../../types";
+import { useAppSelector } from "../../../../app/hooks";
+import React from "react";
+import RandomArrows from "./components/RandomArrows";
+import WelcomeText from "./components/WelcomeText";
+
+// import styles from "./RandomKeys.module.css"
 
 export interface IRandomKeysProps {
-    isTimerActive: boolean;
+  isTimerActive: boolean;
 }
 
-const RandomKeys :React.FC<IRandomKeysProps>= (props) => {
-    // const { isTimerActive } = props
-    const state = useAppSelector((state) => state.playground);
-    return (
-        <div>
-            {state.steps.map((element) => (
-            <span key={element.step}>{MAP_ARROW_CODES[element.currentValue as keyof IMapArrowCodes]}</span>
-            ))}
-        </div>
-    );
+const RandomKeys: React.FC<IRandomKeysProps> = (props) => {
+  const { isTimerActive } = props;
+
+  const state = useAppSelector((state) => state.playground);
+
+  return (
+    <div>
+      <h3>Random keys</h3>
+
+      {state.steps.length === 0 ? (
+        <WelcomeText isTimerActive={isTimerActive} />
+      ) : (
+        <RandomArrows />
+      )}
+    </div>
+  );
 };
-
-
 
 export default RandomKeys;
