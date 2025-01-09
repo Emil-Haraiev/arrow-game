@@ -1,6 +1,8 @@
 import React from 'react';
-import {useAppDispatch} from "../../../../app/hooks";
+import {useAppSelector} from "../../../../app/hooks";
 import {setSteps} from "../../store/slices";
+import {MAP_ARROW_CODES} from "../../constants";
+import {IMapArrowCodes} from "../../types";
 
 export interface IRandomKeysProps {
     isTimerActive: boolean;
@@ -8,10 +10,12 @@ export interface IRandomKeysProps {
 
 const RandomKeys :React.FC<IRandomKeysProps>= (props) => {
     // const { isTimerActive } = props
-    const dispatch = useAppDispatch();
+    const state = useAppSelector((state) => state.playground);
     return (
         <div>
-        <button onClick={() => dispatch(setSteps())}>Click</button>
+            {state.steps.map((element) => (
+            <span key={element.step}>{MAP_ARROW_CODES[element.currentValue as keyof IMapArrowCodes]}</span>
+            ))}
         </div>
     );
 };
