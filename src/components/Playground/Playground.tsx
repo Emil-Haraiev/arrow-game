@@ -51,7 +51,7 @@ const Playground: React.FC = () => {
     <div>
       {state.currentStep}
       <Controls
-          isShowModal={isShowModal}
+        isShowModal={isShowModal}
         isTimerActive={isTimerActive}
         setIsTimerActive={setIsTimerActive}
       />
