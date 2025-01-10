@@ -1,2 +1,4 @@
 import Button from './Button';
-export {Button}
+import TypographyHeader  from "./TypographyHeader";
+import TypographyText from "./TypographyText";
+export {Button, TypographyText, TypographyHeader}

@@ -1,11 +1,22 @@
-import React from 'react';
+import cn from "classnames"
+import React from "react";
+import {
+    Typography as MaterialTypography,
+    TypographyProps as MaterialTypographyProps,
+} from "@mui/material"
 
-const TypographyText = () => {
+import styles from "./TypographyText.module.css"
+
+export interface ITypographyTextProps extends MaterialTypographyProps {}
+
+const TypographyText: React.FC<ITypographyTextProps> = (props) => {
+    const { children, className = "" } = props
+
     return (
-        <div>
-            
-        </div>
-    );
-};
+        <MaterialTypography {...props} className={cn(styles.text, className)}>
+            {children}
+        </MaterialTypography>
+    )
+}
 
-export default TypographyText;
+export default TypographyText
