@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import App from "./App";
 import "./index.css";
 import { store } from "./app/store";
+import {StyledEngineProvider} from "@mui/material";
 
 const container = document.getElementById("root");
 
@@ -13,7 +14,9 @@ if (container) {
   root.render(
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+       <StyledEngineProvider injectFirst>
+           <App />
+       </StyledEngineProvider>
       </Provider>
     </React.StrictMode>,
   );
