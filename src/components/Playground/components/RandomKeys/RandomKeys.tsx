@@ -2,7 +2,7 @@ import { useAppSelector } from "../../../../app/hooks";
 import React from "react";
 import RandomArrows from "./components/RandomArrows";
 import WelcomeText from "./components/WelcomeText";
-import {TypographyHeader} from "../../../UI";
+import { TypographyHeader } from "../../../UI";
 
 // import styles from "./RandomKeys.module.css"
 

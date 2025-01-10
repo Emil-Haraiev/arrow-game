@@ -10,8 +10,8 @@
         cx="50"
         cy="50"
         fill="none"
-        stroke="#e15b64"
-        stroke-width="5"
+        stroke="#4682B4"
+        stroke-width="9"
         r="38"
         stroke-dasharray="179.0707812546182 61.690260418206066"
     >
@@ -19,7 +19,7 @@
         attributeName="transform"
         type="rotate"
         repeatCount="indefinite"
-        dur="6.666666666666666s"
+        dur="2.666666666666666s"
         values="0 50 50;360 50 50"
         keyTimes="0;1">
     </animateTransform>

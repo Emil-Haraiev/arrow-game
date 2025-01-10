@@ -1,14 +1,25 @@
 .text {
-    margin: var(--spacing-medium);
-    font-size: 18px;
-    color: var(--color-gray-dark);
 
-    background: -webkit-linear-gradient(to right bottom, #162454, #533389, #0a9ed8, #7a359f);
-    background: linear-gradient(to right bottom, #162454, #533389, #0a9ed8, #7a359f);
+  margin-bottom: var(--spacing-medium);
+  font-size: 18px;
+  color: var(--color-gray-dark);
 
+  background: -webkit-linear-gradient(
+    to right bottom,
+    #162454,
+    #533389,
+    #0a9ed8,
+    #7a359f
+  );
+  background: linear-gradient(
+    to right bottom,
+    #162454,
+    #533389,
+    #0a9ed8,
+    #7a359f
+  );
 
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
