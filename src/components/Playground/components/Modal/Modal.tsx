@@ -31,7 +31,7 @@ const Modal: React.FC<IModalProps> = (props) => {
                     isSuccessEndGame ? styles.modalSuccess : styles.modalUnsuccess,
                 )}
             >
-                <ResultMessage isSuccessEndGame={isSuccessEndGame} />
+                <ResultMessage  isSuccessEndGame={isSuccessEndGame} />
                 <Button onClick={handleClose} className={styles.button}>
                     Start New Game
                 </Button>
