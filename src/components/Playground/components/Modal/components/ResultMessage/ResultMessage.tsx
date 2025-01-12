@@ -12,7 +12,7 @@ const ResultMessage: React.FC<IResultMessageProps> = (props) => {
     <div className={styles.wrapper}>
       {isSuccessEndGame ? (
         <TypographyText className={styles.text}>
-          Congratulations! <br /> You win!
+          Congratulations! <br /> You won!
         </TypographyText>
       ) : (
         <TypographyText className={styles.text}>
